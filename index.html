@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Aktaruzzaman Shuvo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -277,40 +277,61 @@
             }
         }
         
-        @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-                padding: 1rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-                padding: 2rem 1rem;
-                border-right: none;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            }
-            
-            .main-content {
-                margin-left: 0;
-                padding: 2rem 1.5rem;
-            }
-            
-            .profile-img-container {
-                width: 180px;
-                height:180px;
-                margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #64ffda;
-    position: relative; /* Added */
-    top: 20px; /* Adjust this value as needed */
-            }
+       @media (max-width: 768px) {
+    /* Fix navigation spacing */
+    nav {
+        padding: 0.5rem 1rem;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    /* Fix sidebar layout */
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 5rem 1rem 1.5rem; /* Adjusted padding */
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Fix profile image container */
+    .profile-img-container {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 1rem;
+        top: 0; /* Remove the previous top positioning */
+    }
+    
+    /* Fix main content spacing */
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    /* Adjust profile info text */
+    .profile-info h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .profile-info p {
+        text-align: center;
+    }
+    
+    /* Fix contact info spacing */
+    .contact-info {
+        margin-top: 1rem;
+    }
+    
+    /* Adjust social links */
+    .social-links {
+        justify-content: center;
+        margin: 1.5rem 0;
+    }
+}
         }
     </style>
 </head>
