@@ -265,7 +265,33 @@
     margin: 20px 0;
   }
 
+  .blinking-scroll {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: scroll-text 10s linear infinite, blink 1s steps(2, start) infinite;
+    font-weight: bold;
+    color: #00ffff; /* cyan */
+    font-size: 1.2em;
+  }
 
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+        
 
 
         
@@ -418,7 +444,7 @@
     <main class="main-content">
         <!-- Publication Section -->
         <section id="Publications">
-            <h1 class="section-title" ;" style="color:cyan">Apologies, this site is currently under construction.</h1>
+           <h1 class="blinking-scroll section-title" style="color: red">Apologies, this site is currently under construction.</h1>
            <p>As I’m managing everything on my own and balancing other commitments, progress has been slower than expected. Thank you for your valuable time and patience.</a>.</p>
           <hr class="fancy-hr">
         </section>
