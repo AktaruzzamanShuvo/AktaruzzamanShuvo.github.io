@@ -266,15 +266,29 @@
   }
 
 
-        .blinking-text {
-    animation: blink 1s steps(2, start) infinite;
-    color: red;
+    .blinking-scroll {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: scroll-text 10s linear infinite, blink 1s steps(2, start) infinite;
     font-weight: bold;
+    color: #00ffff; /* cyan */
+    font-size: 1.2em;
   }
 
   @keyframes blink {
     to {
       visibility: hidden;
+    }
+  }
+
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 
