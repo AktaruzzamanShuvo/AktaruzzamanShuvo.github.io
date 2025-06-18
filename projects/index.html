@@ -266,31 +266,25 @@
   }
 
 
-    .blinking-scroll {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: scroll-text 10s linear infinite, blink 1s steps(2, start) infinite;
-    font-weight: bold;
-    color: #00ffff; /* cyan */
-    font-size: 1.2em;
-  }
+  .scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 15s linear infinite;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: red;
+  padding-left: 100%;
+  line-height: 2.5rem; /* Match the wrapper height */
+}
 
-  @keyframes blink {
-    to {
-      visibility: hidden;
-    }
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
   }
-
-  @keyframes scroll-text {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
   }
+}  
 
 
 
@@ -442,14 +436,15 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Publication Section -->
+           <!-- Publication Section -->
         <section id="Publications">
-         <h1 class="blinking-scroll section-title" style="color: cyan"> >Apologies, this site is currently under construction.</h1>
-           <p>As I’m managing everything on my own and balancing other commitments, progress has been slower than expected. Thank you for your valuable time and patience.</a>.</p>
+            <div class="scroll-wrapper">
+           <h1 class="scrolling-text">Apologies, this site is currently under construction.</h1>
+            </div>
+           <p>Since I’m handling everything independently while juggling other responsibilities, progress has been slower than anticipated. I truly appreciate your time and patience.</a>.</p>
           <hr class="fancy-hr">
         </section>
 
-        
 
        
     </main>
