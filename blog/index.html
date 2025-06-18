@@ -265,6 +265,32 @@
     margin: 20px 0;
   }
 
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 2.5rem; /* Adjust height to match text size */
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 15s linear infinite;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: red;
+  padding-left: 100%;
+  line-height: 2.5rem; /* Match the wrapper height */
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}  
 
 
 
@@ -418,8 +444,10 @@
     <main class="main-content">
         <!-- Publication Section -->
         <section id="Publications">
-            <h1 class="section-title" ;" style="color:cyan">Apologies, this site is currently under construction.</h1>
-           <p>As I’m managing everything on my own and balancing other commitments, progress has been slower than expected. Thank you for your valuable time and patience.</a>.</p>
+            <div class="scroll-wrapper">
+           <h1 class="scrolling-text">Apologies, this site is currently under construction.</h1>
+            </div>
+           <p>Since I’m handling everything independently while juggling other responsibilities, progress has been slower than anticipated. I truly appreciate your time and patience.</a>.</p>
           <hr class="fancy-hr">
         </section>
 
