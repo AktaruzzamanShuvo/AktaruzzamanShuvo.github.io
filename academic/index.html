@@ -373,7 +373,29 @@
     .contact-info {
         margin-top: 1rem;
     }
-    
+
+
+
+        .slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+}
+
+
+
+           
     /* Adjust social links */
     .social-links {
         justify-content: center;
@@ -381,6 +403,9 @@
     }
 }
         }
+
+
+
     </style>
 </head>
 <body>
@@ -476,15 +501,24 @@
   <li>VLSI I</li>
   <li>Control Systems</li>
 </ul>
-      <P>Each course was accompanied by laboratory sessions that enabled me to apply concepts through simulations and hands-on experimentation.I gained proficiency in a wide range of industry-standard software tools, including:
-<STRONG>OrCAD:PSPICE</STRONG>, <STRONG>Proteus</STRONG>,<STRONG>Quartus</STRONG> , <STRONG>MATLAB</STRONG>,<STRONG>Simulink</STRONG>, <STRONG>AutoCAD</STRONG>,<STRONG>PowerWorld Simulator</STRONG>, <STRONG>Cadence:Virtuoso</STRONG>, <STRONG>HOMER Pro</STRONG>,<STRONG> Origin</STRONG>, among others.Alongside software skills, I also acquired practical experience with hardware platforms and embedded systems such as:
-<STRONG>Arduino Uno</STRONG>,<STRONG>Arduino Nano</STRONG>,<STRONG> ESP8266 NodeMCU</STRONG>,<STRONG>MPU 8086</STRONG>,<STRONG>FPGA boards</STRONG>,and various integrated sensor systems.</P>   
+<P>Each course was accompanied by laboratory sessions that enabled me to apply concepts through simulations and hands-on experimentation.</p>
+<p>I gained proficiency in a wide range of industry-standard software tools, including:</p>
+<p><STRONG>OrCAD:PSPICE</STRONG>, <STRONG>Proteus</STRONG>,<STRONG>Quartus</STRONG> , <STRONG>MATLAB</STRONG>,<STRONG>Simulink</STRONG>, <STRONG>AutoCAD</STRONG>,<STRONG>PowerWorld Simulator</STRONG>, <STRONG>Cadence:Virtuoso</STRONG>, <STRONG>HOMER Pro</STRONG>,<STRONG> Origin</STRONG>, among others.</p>
+<p>Alongside software skills, I also acquired practical experience with hardware platforms and embedded systems such as:</p>
+<p><STRONG>Arduino Uno</STRONG>,<STRONG>Arduino Nano</STRONG>,<STRONG> ESP8266 NodeMCU</STRONG>,<STRONG>MPU 8086</STRONG>,<STRONG>FPGA boards</STRONG>,and various integrated sensor systems.</P>   
+                 
 <p>As part of my undergraduate studies, I conducted a thesis in the field of <strong>nanomaterials</strong>,under the guidance of the esteemed <strong>Professor Dr. Meganur Rahman</strong>. The title of my thesis was:
 "<strong>Investigation of Electric Properties of Bismuth Ferrite Nanoparticles at Various Temperatures</strong>",
 for which I was honored with the <strong>highest academic distinction (Grade: 4.00/4.00)</strong>.</p> 
-                 <p>My academic performance consistently placed me among the top 5% of my batch, earning me tuition fee waivers in many semesters as recognition of academic excellence.</p>
+                 
+<p>My academic performance consistently placed me among the top 5% of my batch, earning me tuition fee waivers in many semesters as recognition of academic excellence.</p>
 <p> Beyond the classroom, I actively participated in <strong>seminars</strong>, <strong>technical competitions</strong>, <strong>sports events</strong>, and <strong>cultural programs</strong>. These experiences enhanced my <strong>communication</strong>, <strong>leadership</strong>, <strong>adaptability</strong>, and ability to <strong>collaborate effectively within diverse teams</strong>.</p>
-
+<div class="slideshow-container">
+  <img class="slide" src="images/slide1.jpg" />
+  <img class="slide" src="images/slide2.jpg" />
+  <img class="slide" src="images/slide3.jpg" />
+  <img class="slide" src="images/slide4.jpg" />
+</div>
 
 <p>This section also features cherished memories from my years at AUST, reflecting a vibrant and intellectually fulfilling undergraduate journey that laid the foundation for my future academic and professional pursuits.</p>
                 
@@ -532,6 +566,21 @@ for which I was honored with the <strong>highest academic distinction (Grade: 4.
                 });
             });
         });
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // 3 seconds
+}
+        
     </script>
 </body>
 </html>
