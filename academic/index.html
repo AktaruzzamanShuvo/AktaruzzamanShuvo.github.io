@@ -375,22 +375,25 @@
     }
 
 
+.slideshow-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  min-height: 100vh;        /* full viewport height */
+  background-color: #0a192f; /* optional: Oxford Blue background */
+}
+
 .slideshow-container {
+  max-width: 800px;
   width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 40px auto;
   position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 .slide {
-  display: none;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  display: none;
+  border-radius: 10px; /* optional: rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* optional: shadow */
 }
 
 
@@ -513,13 +516,16 @@ for which I was honored with the <strong>highest academic distinction (Grade: 4.
                  
 <p>My academic performance consistently placed me among the top 5% of my batch, earning me tuition fee waivers in many semesters as recognition of academic excellence.</p>
 <p> Beyond the classroom, I actively participated in <strong>seminars</strong>, <strong>technical competitions</strong>, <strong>sports events</strong>, and <strong>cultural programs</strong>. These experiences enhanced my <strong>communication</strong>, <strong>leadership</strong>, <strong>adaptability</strong>, and ability to <strong>collaborate effectively within diverse teams</strong>.</p>
-<div class="slideshow-container">
-  <img class="slide" src="../assets/images/slide1.jpg" alt="Slide 1">
-  <img class="slide" src="../assets/images/slide2.jpg" alt="Slide 2">
-  <img class="slide" src="../assets/images/slide3.jpg" alt="Slide 3">
-  <img class="slide" src="../assets/images/slide4.jpg" alt="Slide 4">
-  <img class="slide" src="../assets/images/slide5.jpg" alt="Slide 5">
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
+    <img class="slide" src="../assets/images/slide1.jpg" alt="Slide 1">
+    <img class="slide" src="../assets/images/slide2.jpg" alt="Slide 2">
+    <img class="slide" src="../assets/images/slide3.jpg" alt="Slide 3">
+    <img class="slide" src="../assets/images/slide4.jpg" alt="Slide 4">
+    <img class="slide" src="../assets/images/slide5.jpg" alt="Slide 5">
+  </div>
 </div>
+                 
 <p>This section also features cherished memories from my years at AUST, reflecting a vibrant and intellectually fulfilling undergraduate journey that laid the foundation for my future academic and professional pursuits.</p>
                 
 
@@ -566,19 +572,20 @@ for which I was honored with the <strong>highest academic distinction (Grade: 4.
                 });
             });
         });
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
         
     </script>
 </body>
