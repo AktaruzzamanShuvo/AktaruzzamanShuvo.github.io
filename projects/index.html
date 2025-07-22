@@ -198,11 +198,13 @@
   position: relative;
 }
 
-.slide {
-  width:100%;
+
+.slide1, .slide2, .slide3,.slide4,.slide5,.slide5,.slide6,.slide7,.slide8 {
+  width: 100%;
+  height: auto;
   display: none;
-  border-radius: 10px; /* optional: rounded corners */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* optional: shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); 
 }
 
 
@@ -482,8 +484,8 @@
 <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide10.jpg" alt="Slide 10">
-    <img class="slide" src="../assets/images/slide11.jpg" alt="Slide 11">
+    <img class="slide slide1" src="../assets/images/slide10.jpg" alt="Slide 10">
+    <img class="slide slide1" src="../assets/images/slide11.jpg" alt="Slide 11">
   </div>
 </div>
  <p> Project Overview | <a href="    " target="_blank"> Google Drive Link </a>
@@ -498,7 +500,7 @@
  <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide12.jpg" alt="Slide 12">
+    <img class="slide slide2" src="../assets/images/slide12.jpg" alt="Slide 12">
   </div>
 </div>
  <p> Project Overview |<a href="    " target="_blank"> Google Drive Link </a>
@@ -526,8 +528,8 @@
  <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide14.jpg" alt="Slide 14">
-    <img class="slide" src="../assets/images/slide15.jpg" alt="Slide 15">
+    <img class="slide slide4" src="../assets/images/slide14.jpg" alt="Slide 14">
+    <img class="slide slide4" src="../assets/images/slide15.jpg" alt="Slide 15">
   </div>
 </div>
  <p> Project Overview |<a href="    " target="_blank"> Google Drive Link </a>
@@ -541,9 +543,9 @@
 <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide16.jpg" alt="Slide 16">
-    <img class="slide" src="../assets/images/slide17.jpg" alt="Slide 17">
-<img class="slide" src="../assets/images/slide18.jpg" alt="Slide 18">
+    <img class="slide slide5" src="../assets/images/slide16.jpg" alt="Slide 16">
+    <img class="slide slide5" src="../assets/images/slide17.jpg" alt="Slide 17">
+<img class="slide slide5" src="../assets/images/slide18.jpg" alt="Slide 18">
 
   </div>
 </div>
@@ -558,12 +560,12 @@
 <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide19.jpg" alt="Slide 19">
-    <img class="slide" src="../assets/images/slide20.jpg" alt="Slide 20">
- <img class="slide" src="../assets/images/slide21.jpg" alt="Slide 21">
-    <img class="slide" src="../assets/images/slide22.jpg" alt="Slide 22">
- <img class="slide" src="../assets/images/slide23.jpg" alt="Slide 23">
-    <img class="slide" src="../assets/images/slide24.jpg" alt="Slide 24">
+    <img class="slide slide6" src="../assets/images/slide19.jpg" alt="Slide 19">
+    <img class="slide slide6" src="../assets/images/slide20.jpg" alt="Slide 20">
+ <img class="slide slide6" src="../assets/images/slide21.jpg" alt="Slide 21">
+    <img class="slide slide6" src="../assets/images/slide22.jpg" alt="Slide 22">
+ <img class="slide slide6" src="../assets/images/slide23.jpg" alt="Slide 23">
+    <img class="slide slide6" src="../assets/images/slide24.jpg" alt="Slide 24">
   </div>
 </div>
  <p> Project Overview |<a href="    " target="_blank"> Google Drive Link </a>
@@ -579,8 +581,8 @@
 <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide25.jpg" alt="Slide 25">
-<img class="slide" src="../assets/images/slide26.jpg" alt="Slide 26">
+    <img class="slide slide7" src="../assets/images/slide25.jpg" alt="Slide 25">
+<img class="slide slide7" src="../assets/images/slide26.jpg" alt="Slide 26">
     
   </div>
 </div>
@@ -600,8 +602,8 @@
 <br>
 <div class="slideshow-wrapper">
   <div class="slideshow-container">
-    <img class="slide" src="../assets/images/slide27.jpg" alt="Slide 27">
-<img class="slide" src="../assets/images/slide28.jpg" alt="Slide 28">
+    <img class="slide slide8" src="../assets/images/slide27.jpg" alt="Slide 27">
+<img class="slide slide8" src="../assets/images/slide28.jpg" alt="Slide 28">
     
   </div>
 </div>
@@ -647,20 +649,35 @@
         });
 
 
-    let slideIndex = 0;
-  showSlides();
+  function startSlideshow(slideClass) {
+  let index = 0;
+  const slides = document.getElementsByClassName(slideClass);
 
   function showSlides() {
-    let slides = document.getElementsByClassName("slide");
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+    index++;
+    if (index > slides.length) index = 1;
+    slides[index - 1].style.display = "block";
+    setTimeout(showSlides, 2000);
   }
 
+  showSlides();
+}
+
+startSlideshow("slide1"); // for the first slideshow
+startSlideshow("slide2"); // for the second slideshow
+startSlideshow("slide3"); // etc.
+startSlideshow("slide4"); // etc.
+startSlideshow("slide5"); // etc.
+        startSlideshow("slide6"); // etc.
+        startSlideshow("slide7"); // etc.
+        startSlideshow("slide8"); // etc.
+
+
+
+        
 
     </script>
 </body>
