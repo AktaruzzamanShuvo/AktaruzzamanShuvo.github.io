@@ -183,6 +183,29 @@
             gap: 1rem;
             margin-top: 1.5rem;
         }
+
+.slideshow-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  min-height: 100vh;        /* full viewport height */
+  background-color: #0a192f; /* optional: Oxford Blue background */
+}
+
+.slideshow-container {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 10px; /* optional: rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* optional: shadow */
+}
+
+
         
         .social-links a {
             color: var(--primary);
@@ -436,16 +459,50 @@
 
     <!-- Main Content -->
     <main class="main-content">
-           <!-- Publication Section -->
-        <section id="Publications">
-            <div class="scroll-wrapper">
-           <h1 class="scrolling-text">Apologies, this site is currently under construction.</h1>
-            </div>
-           <p>Since I’m handling everything independently while juggling other responsibilities, progress has been slower than anticipated. I truly appreciate your time and patience.</a>.</p>
+          <!-- PROJECTS -->
+        <section id="Projects">
+            <h1 class="section-title" style="text-align: center;">Innovation in Action: Highlights of My Academic Projects</h1>
           <hr class="fancy-hr">
         </section>
 
+        <!-- projects -->
+           <section id="projects">
+               <h3 class="section-title" style="color: #002147">GRADUATE LEVEL</h3>
+               <hr class="solid-line">
+               <h3 class="section-title" style="color: #002147">UNDERGRADUATE LEVEL</h3>
+               <hr class="solid-line">
 
+             <ol>
+               
+              <P><strong>Notch filter to eliminate noise from an ECG signal </strong></P> 
+            <P> Designed a 110 Hz notch filter using pole-zero placement in MATLAB to remove power-line interference from ECG signals. Conducted FFT analysis to evaluate signal clarity, demonstrating practical DSP filter design for biomedical applications.</P>
+ 
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
+    <img class="slide" src="../assets/images/slide1.jpg" alt="Slide 1">
+    <img class="slide" src="../assets/images/slide2.jpg" alt="Slide 2">
+  </div>
+</div>
+ <p> |<a href="https://www.aust.edu" target="_blank">Google Drive Link </a>
+</p>   
+             </ol>
+
+   <ol>
+               
+              <P><strong>Microcontroller-based Energy Efficient Escalator using Arduino Uno </strong></P> 
+            <P>Built an Arduino-controlled escalator prototype that activates only when passengers are detected. Integrated sensors and relays to control motor operation, ensuring energy efficiency and user safety through microcontroller-based automation.</P>
+ 
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
+    <img class="slide" src="../assets/images/slide1.jpg" alt="Slide 1">
+    <img class="slide" src="../assets/images/slide2.jpg" alt="Slide 2">
+  </div>
+</div>
+ <p> |<a href="https://www.aust.edu" target="_blank">Google Drive Link </a>
+</p>   
+             </ol>
+           </section>
+        
        
     </main>
 
@@ -475,6 +532,23 @@
                 });
             });
         });
+
+
+    let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+  }
+
+
     </script>
 </body>
 </html>
