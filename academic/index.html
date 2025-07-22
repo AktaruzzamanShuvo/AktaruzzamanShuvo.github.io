@@ -643,20 +643,20 @@ for which I was honored with the highest academic distinction (Grade: 4.00/4.00)
             });
         });
 
-    let slideIndex = 0;
-  showSlides();
+    document.querySelectorAll(".slideshow-container").forEach(container => {
+    const slides = container.querySelectorAll(".slide");
+    let index = 0;
 
-  function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    function showSlide() {
+      slides.forEach(slide => slide.style.display = "none");
+      slides[index].style.display = "block";
+      index = (index + 1) % slides.length;
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
-  }
-        
+
+    showSlide(); // Show the first slide immediately
+    setInterval(showSlide, 3000); // Change every 3 seconds
+  });
+  
     </script>
 </body>
 </html>
