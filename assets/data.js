@@ -10,7 +10,7 @@ const SITE_DATA = {
   /* ---------- SIDEBAR (shared on every page) ---------- */
   profile: {
     name:       "A.K.M. Aktaruzzaman Shuvo",
-    role:       "Research Enthusiast | B.Sc in EEE,AUST | MS in BME,DU",
+    role:       "Research Enthusiast | B.Sc in EEE,AUST | MS in BME,DU (Ongoing",
     subtitle:   "Former Lecturer @ BUFT",
     photo:      "../assets/images/profile.jpg",   // path relative to sub-folders
     photoRoot:  "assets/images/profile.jpg",      // path from root (index.html)
