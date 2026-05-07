@@ -33,7 +33,7 @@ const SITE_DATA = {
   /* ---------- HOME PAGE ---------- */
   home: {
     bio: [
-      "I am an Electrical Engineer with a <strong>Bachelor of Science in Electrical and Electronic Engineering (EEE)</strong> from <strong>Ahsanullah University of Science and Technology</strong>, completed in November 2023. During my undergraduate studies, I specialized in power systems, gaining in-depth knowledge of electrical networks, renewable energy integration, and sustainable power solutions.",
+      "I am an Electrical Engineer with a <strong>Bachelor of Science in Electrical and Electronic Engineering (EEE)</strong> from <strong>Ahsanullah University of Science and Technology</strong>, completed in November 2023. During my undergraduate studies, I specialized in power systems, control systems, VLSI, digital logic design, electronics, electromagnetism, and programming, while building strong expertise in electrical networks, biosensor design, photonics, renewable energy integration, and sustainable power solutions.",
       "Most recently, I served as a <strong>Lecturer</strong> at <strong>BGMEA University of Fashion & Technology (BUFT)</strong>, where I taught and mentored students in engineering disciplines. My academic journey began at Gaibandha Boys' High School (SSC, 2016) and continued at Gaibandha Government College (HSC, 2018).",
       "I'm passionate about energy systems and research, and I hope to make a difference in sustainable power by learning, innovating, and sharing knowledge with others."
     ],
